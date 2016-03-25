@@ -1,0 +1,21 @@
+<div class="row">
+    <hr class="hr-success" />
+    <div class="col-xs-4">
+        <ol class="breadcrumb bread-danger">
+            <h3 class="mdc-text-grey-400">Search</h3>
+        </ol>
+        <i class="fa fa-search mdc-text-grey-500" style="padding-top:70%;font-size:200px;margin-left:-100px;"></i>
+    </div>
+    <div class="col-xs-8">
+        <br />
+        <div class="well">
+            <h4>Query</h4>
+            <div class="input-group">
+                <span class="input-group-addon" id="searchQuery">Query: </span>
+                <input type="text" class="form-control" aria-describedby="searchQuery" ng-model="searchQuery">
+            </div>
+            <br />
+            <button class="btn btn-success" ng-click="search()">Search</button>
+        </div>
+    </div>
+</div>

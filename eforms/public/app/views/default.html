@@ -1,0 +1,62 @@
+<div ui-view="toolbar"></div>
+
+<tabset>
+    <tab sortable-tab ng-repeat="tab in tabs" active="tab.active" disable="tab.disabled">
+        <tab-heading>
+            {{tab.form.formInfo.title}} &nbsp;
+            <a ng-click="removeTab($index)" href="" class="tabCloseBtn">
+                <i class="fa fa-times"></i>
+            </a>
+        </tab-heading>
+        <div style="padding-left:10px; padding-right:10px;">
+            <div ui-view="vin" ng-if="tab.form.formInfo.type == 'VIN'"></div>
+            <div ui-view="asr" ng-if="tab.form.formInfo.type == 'ASR'"></div>
+        </div>
+    </tab>
+
+    <tab disable="false">
+        <tab-heading>
+            <i class="fa fa-plus"></i>
+        </tab-heading>
+        <div>
+            <h2 class="robotothin">eForms <small class="robotoregular">2015</small></h2>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <h5 class="robotoregular mdc-text-blue-500">START</h5>
+                    <br />
+                    <well-card iconclass="fa-file-o mdc-text-green-500" wellheader="VIN" wellcontent="Create new VIN verification form.">
+                        <button type='button' class='btn btn-sm btn-primary' ng-click="addTab('VIN')">NEW</button>
+                    </well-card>
+                    <well-card iconclass="fa-file-o mdc-text-lime-500" wellheader="ASR" wellcontent="Create new ASR Auto storage form.">
+                        <button type='button' class='btn btn-sm btn-primary' ng-click="addTab('ASR')">NEW</button>
+                    </well-card>
+                </div>
+                <div class="col-lg-4 col-md-6 col-xs-12">
+                    <h5 class="robotoregular mdc-text-teal-500">RECENT FORMS</h5>
+                    <div ui-view="recentforms"></div>
+                </div>
+                <div class="col-lg-4 col-md-12 col-xs-12">
+                    <h5 class="robotoregular mdc-text-lime-500">WHAT'S NEW IN EFORMS</h5>
+                    <br />
+                    <div class="row">
+                        <div ui-view="releasenotes"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </tab>
+</tabset>
+
+<div ng-controller="transferCtrl">
+    <pageslide ps-open="checked" ps-side="right" ps-size="500px">
+        <div style="padding:20px;padding-top:100px">
+            <p ng-repeat="form in finalizedForms track by $index" ng-if="!form.formInfo.transferred">
+                <input type="checkbox" ng-model="transferList[$index]">
+                {{form.formInfo.title}}
+            </p>
+            <button class="btn btn-success btn-sm" ng-click="transfer()">Transfer</button>
+            <button class="btn btn-danger btn-sm" ng-click="checked = false">Close</button>
+        </div>
+    </pageslide>
+</div>

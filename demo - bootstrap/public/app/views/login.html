@@ -1,0 +1,26 @@
+<div class="row">
+    <hr class="hr-success" />
+    <div class="col-xs-4">
+        <ol class="breadcrumb bread-danger">
+            <h3 class="mdc-text-grey-400">Login</h3>
+        </ol>
+        <i class="fa fa-sign-in mdc-text-grey-500" style="padding-top:70%;font-size:200px;margin-left:-100px;"></i>
+    </div>
+    <div class="col-xs-8">
+        <br />
+        <div class="well">
+            <h4>User Credentials</h4>
+            <div class="input-group">
+                <span class="input-group-addon" id="username">Username: </span>
+                <input type="text" class="form-control" aria-describedby="username" ng-model="username">
+            </div>
+            <br />
+            <div class="input-group">
+                <span class="input-group-addon" id="password">Password: </span>
+                <input type="password" class="form-control" aria-describedby="password" ng-model="password">
+            </div>
+            <br />
+            <button class="btn btn-success" ng-click="login()">Login</button>
+        </div>
+    </div>
+</div>

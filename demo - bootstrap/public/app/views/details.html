@@ -1,0 +1,65 @@
+<div class="row">
+    <div class="col-xs-5">
+        <h1 class="col-md-offset-1 mdc-text-grey-400"><i class='fa fa-info fa-lg'></i>&nbsp;Details</h1>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <tabset>
+        <tab heading="Person">
+            <div class="row">
+                <div class="col-xs-5">
+                    <div class="well text-center">
+                        <img src="images/mugshot.jpg" style="max-width:100%;max-height:70vh;">
+                    </div>
+                </div>
+
+                <div class="col-xs-7">
+                    <div class="col">
+                        <div class="well">
+                            <b>Alphonse Gabriel "Al" Capone</b>
+                            <br /> 7244 South Prairie Avenue, Chicago Illinois, 60619
+                        </div>
+                        <div class="well citationBox" style="overflow:auto;">
+                            <ul class="list-group" style="max-height:100%;">
+                                <li class="list-group-item" ng-repeat="cit in citations">
+                                    <b>{{cit.title}}</b>
+                                    <p>&nbsp;&nbsp;{{cit.details}}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </tab>
+        <tab heading="Vehicle">
+            <div class="row">
+                <div class="col-xs-5">
+                    <div class="well text-center">
+                        <img src="images/capone_car.jpg" style="max-width:100%;max-height:70vh;">
+                    </div>
+                </div>
+
+                <div class="col-xs-7">
+                    <div class="col">
+                        <div class="well">
+                            <ul class="list-group">
+                                <li class="list-group-item"><b>Year</b> 1932</li>
+                                <li class="list-group-item"><b>Make</b> Cadillac</li>
+                                <li class="list-group-item"><b>Model</b> V-16</li>
+                            </ul>
+                        </div>
+                        <div class="well vehicleNotesBox" style="overflow:auto;">
+                            <ul class="list-group" style="max-height:100%;">
+                                <li class="list-group-item" ng-repeat="note in vehicleNotes">
+                                    <p>{{note}}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </tab>
+    </tabset>
+</div>

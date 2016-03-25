@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Demo</title>
+    <link rel="stylesheet" href="build/css/styles.css">
+    <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+
+    <script src="build/js/plugins.js"></script>
+</head>
+
+<body ng-controller="mainCtrl as main">
+    <md-content>
+
+        <md-toolbar id="headerBar">
+            <div class="md-toolbar-tools">
+                <div class="headerBarControls">
+                    <md-button class="md-icon-button" aria-label="Back" ng-click="main.navigateBack()" ng-show="main.isLoggedIn">
+                        <!--<md-icon>arrow_back</md-icon>-->
+                        <md-icon md-svg-src="build/icons/arrow_back.svg" />
+                    </md-button>
+                </div>
+                <h2>
+                    <span>Toolbar</span>
+                </h2>
+                <span flex></span>
+                <div class="headerBarControls">
+                    <md-button class="md-icon-button" aria-label="Reload" ng-click="main.reloadPage()">
+                        <!--<md-icon md-font-set="material-icons">refresh</md-icon>-->
+                        <md-icon md-svg-src="build/icons/refresh.svg" />
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="DevTools" ng-click="main.openDevTools()">
+                        <!--<md-icon>build</md-icon>-->
+                        <md-icon md-svg-src="build/icons/build.svg" />
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Minimize" id="windowControlMinimize" ng-click="main.windowMinimize()">
+                        <!--<md-icon>fullscreen_exit</md-icon>-->
+                        <md-icon md-svg-src="build/icons/fullscreen_exit.svg" />
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Maximize" id="windowControlMaximize" ng-click="main.windowMaximize()">
+                        <!--<md-icon>fullscreen</md-icon>-->
+                        <md-icon md-svg-src="build/icons/fullscreen.svg" />
+                    </md-button>
+                    <md-button class="md-icon-button" aria-label="Close" id="windowControlClose" ng-click="main.windowClose()">
+                        <!--<md-icon>close</md-icon>-->
+                        <md-icon md-svg-src="build/icons/close.svg" />
+                    </md-button>
+                </div>
+            </div>
+        </md-toolbar>
+
+        <div ui-view layout layout-fill></div>
+    </md-content>
+</body>
+
+<script src="build/js/scripts.js"></script>
+
+</html>
