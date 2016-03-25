@@ -1,1 +1,1 @@
-start ./nw/nw.exe "./demo - bootstrap/"
+start ./nw/nw.exe "./Prototype1-bootstrap/"

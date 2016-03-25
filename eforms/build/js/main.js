@@ -111,8 +111,6 @@ angular.module('demoapp').controller('cssBundleCtrl', ['$scope', '$css', functio
         });
     }
 }]);
-
-
 angular.module('demoapp').controller('indexCtrl', ['$scope', 'hotkeys', function ($scope, hotkeys) {
     $scope.welcome = "eForms-nw.js";
     hotkeys.add({
@@ -121,7 +119,6 @@ angular.module('demoapp').controller('indexCtrl', ['$scope', 'hotkeys', function
         callback: function () { }
     });
 }]);
-
 angular.module('demoapp').controller('mainCtrl', ['$scope', '$state', 'hotkeys', function ($scope, $state, hotkeys) {
     $scope.today = new Date();
     $scope.format = 'M/d/yy h:mm:ss a';

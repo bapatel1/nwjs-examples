@@ -1,0 +1,78 @@
+<div layout-fill class="parentDiv">
+    <md-content>
+        <md-tabs md-dynamic-height>
+            <md-tab label="Person">
+                <md-content class="md-padding">
+                    <div layout="row">
+                        <div flex="30">
+                            <md-whiteframe class="md-whiteframe-2dp mdc-bg-blue-grey-50" layout layout-align="center center" style="max-width:100%;">
+                                <img src="build/images/mugshot.jpg" style="max-width:100%">
+                            </md-whiteframe>
+                        </div>
+                        <div flex layout="column">
+                            <div layout-padding>
+                                <md-whiteframe class="md-whiteframe-2dp mdc-bg-blue-grey-50" layout layout-align="center center" style="max-width:100%;">
+                                    <span>
+                                        Alphonse Gabriel "Al" Capone
+                                        <br /> 7244 South Prairie Avenue, Chicago Illinois, 60619
+                                    </span>
+                                </md-whiteframe>
+                            </div>
+                            <div layout-padding>
+                                <md-whiteframe class="md-whiteframe-2dp mdc-bg-blue-grey-50" layout style="max-width:100%;max-height:65vh">
+                                    <md-content style="overflow-y:auto">
+                                        <md-list class=" mdc-bg-blue-grey-50">
+                                            <md-list-item class="md-2-line mdc-bg-blue-grey-50" ng-repeat="cit in details.citations">
+                                                <div class="md-list-item-text">
+                                                    <h3>{{cit.title}}</h3>
+                                                    <p>
+                                                        &nbsp;&nbsp;{{cit.text}}
+                                                    </p>
+                                                </div>
+                                            </md-list-item>
+                                        </md-list>
+                                    </md-content>
+                                </md-whiteframe>
+                            </div>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+            <md-tab label="Vehicle">
+                <md-content class="md-padding">
+                    <div layout="row">
+                        <div layout="column" flex="50">
+                            <md-whiteframe class="md-whiteframe-2dp mdc-bg-blue-grey-50" layout layout-align="center center" flex style="max-height:45vh;">
+                                <img src="build/images/capone_car.jpg" style="max-height:inherit;">
+                            </md-whiteframe>
+                            <br />
+                            <md-whiteframe class="md-whiteframe-2dp mdc-bg-blue-grey-50" layout flex style="max-height:45vh;">
+                                <div layout="column" layout-padding>
+                                    <p>Car has bullet holes in driver side door</p>
+                                    <p>Hidden compartments under passenger seat and trunk bottom</p>
+                                </div>
+                            </md-whiteframe>
+                        </div>
+                        <div layout="column" flex="50">
+                            <div layout-padding>
+                                <md-whiteframe class="md-whiteframe-2dp mdc-bg-blue-grey-50" layout flex style="max-height:85vh;">
+                                    <div layout="column" layout-padding>
+                                        <span>
+                                            <b>Year</b>&nbsp;1932
+                                        </span>
+                                        <span>
+                                            <b>Make</b>&nbsp;Cadillac
+                                        </span>
+                                        <span>
+                                            <b>Model</b>&nbsp;N/A
+                                        </span>
+                                    </div>
+                                </md-whiteframe>
+                            </div>
+                        </div>
+                    </div>
+                </md-content>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>

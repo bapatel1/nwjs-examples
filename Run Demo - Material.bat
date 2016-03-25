@@ -1,1 +1,1 @@
-start ./nw/nw.exe "./demo - material/"
+start ./nw/nw.exe "./Prototype2-material/"
